@@ -15,9 +15,42 @@
 
  #include "Median3DFilter.h"
  #include "../Volume.h"
+ #include <iostream>
  #include <vector>
  #include <algorithm>
  #include <tuple>
+ #include <array>
+ 
+ // Anonymous namespace to make this function local to this file
+ namespace {
+     // Helper function to find median using counting approach
+     // This avoids using nth_element which is not allowed
+     unsigned char findMedian(const std::vector<unsigned char>& values) {
+         // Since unsigned char has a range of 0-255, we can use a counting approach
+         std::array<int, 256> counts = {0}; // Initialize all counts to 0
+         
+         // Count occurrences of each value
+         for (unsigned char val : values) {
+             counts[val]++;
+         }
+         
+         // Find the middle position
+         size_t totalElements = values.size();
+         size_t medianPosition = totalElements / 2;
+         
+         // Walk through counts until we reach the median position
+         size_t currentPos = 0;
+         for (int i = 0; i < 256; ++i) {
+             currentPos += counts[i];
+             if (currentPos > medianPosition) {
+                 return static_cast<unsigned char>(i);
+             }
+         }
+         
+         // In case of empty vector (shouldn't happen)
+         return 0;
+     }
+ }
  
  // Constructor with kernel size
  Median3DFilter::Median3DFilter(int kernelSize)
@@ -79,33 +112,25 @@
                      }
                  }
                  
-                 // Find median for each channel
+                 // Find median for each channel using our custom median finder
                  unsigned char r_median, g_median = 0, b_median = 0, a_median = 255;
                  
                  // Red channel (always present)
-                 size_t mid = r_values.size() / 2;
-                 std::nth_element(r_values.begin(), r_values.begin() + mid, r_values.end());
-                 r_median = r_values[mid];
+                 r_median = findMedian(r_values);
                  
                  // Green channel (if present)
                  if (channels > 1) {
-                     mid = g_values.size() / 2;
-                     std::nth_element(g_values.begin(), g_values.begin() + mid, g_values.end());
-                     g_median = g_values[mid];
+                     g_median = findMedian(g_values);
                  }
                  
                  // Blue channel (if present)
                  if (channels > 2) {
-                     mid = b_values.size() / 2;
-                     std::nth_element(b_values.begin(), b_values.begin() + mid, b_values.end());
-                     b_median = b_values[mid];
+                     b_median = findMedian(b_values);
                  }
                  
                  // Alpha channel (if present)
                  if (channels > 3) {
-                     mid = a_values.size() / 2;
-                     std::nth_element(a_values.begin(), a_values.begin() + mid, a_values.end());
-                     a_median = a_values[mid];
+                     a_median = findMedian(a_values);
                  }
                  
                  // Set output voxel to median values

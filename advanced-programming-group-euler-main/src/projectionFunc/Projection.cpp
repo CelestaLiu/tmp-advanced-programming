@@ -1,16 +1,16 @@
 /**
  * @file Projection.cpp
  * @brief Implementation of the abstract Projection class
- * @group [GROUP_NAME]
+ * @group [Euler]
  * 
  * Group members:
- * - [MEMBER1] ([USERNAME1])
- * - [MEMBER2] ([USERNAME2])
- * - [MEMBER3] ([USERNAME3])
- * - [MEMBER4] ([USERNAME4])
- * - [MEMBER5] ([USERNAME5])
- * - [MEMBER6] ([USERNAME6])
- * - [MEMBER7] ([USERNAME7])
+ * - [Davide Baino] ([esemsc-db24])
+ * - [Qi Gao] ([esemsc-qg124])
+ * - [Daniel Kaupa] ([esemsc-dbk24])
+ * - [Leyao Liu] ([esemsc-ll1524])
+ * - [Jiayi Lu] ([esemsc-jl7324])
+ * - [Ananya Sinha] ([esemsc-as10524])
+ * - [Mingwei Yan] ([esemsc-my324])
  */
 
 #include "Projection.h"
@@ -37,6 +37,11 @@ void Projection::setSlabRange(int start, int end) {
     // Ensure start <= end, but allow end to be -1 (meaning the last slice)
     if (end != -1 && start > end) {
         throw std::invalid_argument("Slab start index must be less than or equal to end index");
+    }
+
+    // Ensure start is non-negative
+    if (start < 0) {
+        throw std::invalid_argument("Slab start index must be non-negative");
     }
     
     slabStart = start;

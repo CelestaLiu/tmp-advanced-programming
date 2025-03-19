@@ -1,16 +1,16 @@
 /**
  * @file MinIntensityProj.h
  * @brief Definition of the MinIntensityProj class
- * @group [GROUP_NAME]
+ * @group [Euler]
  * 
  * Group members:
- * - [MEMBER1] ([USERNAME1])
- * - [MEMBER2] ([USERNAME2])
- * - [MEMBER3] ([USERNAME3])
- * - [MEMBER4] ([USERNAME4])
- * - [MEMBER5] ([USERNAME5])
- * - [MEMBER6] ([USERNAME6])
- * - [MEMBER7] ([USERNAME7])
+ * - [Davide Baino] ([esemsc-db24])
+ * - [Qi Gao] ([esemsc-qg124])
+ * - [Daniel Kaupa] ([esemsc-dbk24])
+ * - [Leyao Liu] ([esemsc-ll1524])
+ * - [Jiayi Lu] ([esemsc-jl7324])
+ * - [Ananya Sinha] ([esemsc-as10524])
+ * - [Mingwei Yan] ([esemsc-my324])
  */
 
 #ifndef MIN_INTENSITY_PROJ_H

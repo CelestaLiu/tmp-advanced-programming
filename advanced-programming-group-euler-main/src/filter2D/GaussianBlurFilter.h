@@ -1,13 +1,3 @@
-#ifndef GAUSSIAN_BLUR_FILTER_H
-#define GAUSSIAN_BLUR_FILTER_H
-
-#include "Filter.h"
-#include "../Image.h"
-
-#include <vector>
-#include <stdexcept>
-#include <cmath>
-
 /**
  * @file GaussianBlurFilter.h
  * @brief Declaration of the GaussianBlurFilter class that applies a weighted Gaussian blur to an image.
@@ -22,6 +12,16 @@
  * - [Ananya Sinha] ([esemsc-as10524])
  * - [Mingwei Yan] ([esemsc-my324])
  */
+
+#ifndef GAUSSIAN_BLUR_FILTER_H
+#define GAUSSIAN_BLUR_FILTER_H
+
+#include "Filter.h"
+#include "../Image.h"
+
+#include <vector>
+#include <stdexcept>
+#include <cmath>
 
 /**
  * @brief Gaussian blur filter that replaces each pixel with a weighted average of its neighbors.

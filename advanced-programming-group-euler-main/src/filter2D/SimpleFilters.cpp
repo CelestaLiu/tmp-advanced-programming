@@ -82,6 +82,7 @@ Image SimpleFilters::apply(const Image& input) {
         throw std::invalid_argument("Unknown filter: " + name);
     }
 }
+
 // Adjust the brightness of an image
 Image SimpleFilters::applyBrightness(const Image& input, int brightness) {
     Image output = input;
@@ -180,6 +181,7 @@ Image SimpleFilters::applyGreyscaleHistogramEqualization(const Image& input) {
 
     return output;
 }
+
 // Apply Histogram Equalization to an image (calls greyscale version if needed)
 Image SimpleFilters::applyHistogramEqualization(const Image& input) {
     int width = input.getWidth();
@@ -226,6 +228,7 @@ Image SimpleFilters::applyHistogramEqualization(const Image& input) {
 
     return output;
 }
+
 // Add salt-and-pepper noise to an image
 Image SimpleFilters::applySaltAndPepperNoise(const Image& input, float noisePercentage) {
     if (noisePercentage < 0.0f || noisePercentage > 100.0f) {

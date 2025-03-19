@@ -13,8 +13,7 @@
  * - [Mingwei Yan] ([esemsc-my324])
  */
 
-
-// Include STB image libraries
+ // Include STB image libraries
 #define STB_IMAGE_IMPLEMENTATION
 #include "stb_image.h"
 #define STB_IMAGE_WRITE_IMPLEMENTATION
@@ -22,9 +21,6 @@
 
 #include "Image.h"
 #include "filter2D/SimpleFilters.h"
-
-#include <stdexcept>
-#include <iostream>
 
 // *******************************************************************************************
 // -------------------------------------------------------------------------------------------
@@ -106,13 +102,13 @@ bool Image::saveToFile(const std::string& filename) const {
             Pixel p = pixels[y][x];
             int index = (y * width + x) * channels;
 
-            // copy pixel data to vector
+            // Copy pixel data to vector
             data[index] = p.getR();
             if (channels > 1) data[index + 1] = p.getG();
             if (channels > 2) data[index + 2] = p.getB();
             if (channels == 4) data[index + 3] = p.getA(); // Only if RGBA
-            }
         }
+    }
 
     // Write to file
     int success = stbi_write_png(filename.c_str(), width, height, channels, data.data(), 0);
@@ -192,7 +188,7 @@ std::unique_ptr<DataContainer> Image::applyFilter(const std::string& filterName,
 Image Image::toGreyscale() const {
     // Create new image with same dimensions, but one channel
     Image greyscale_img(width, height, 1);
-    // Convert each pixel to grayscale
+    // Convert each pixel to greyscale
     for (int y = 0; y < height; ++y) {
         for (int x = 0; x < width; ++x) {
             greyscale_img.setPixel(x, y, getPixel(x, y).toGreyscale());

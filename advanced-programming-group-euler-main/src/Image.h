@@ -21,6 +21,8 @@
 
 #include <vector>
 #include <string>
+#include <stdexcept>
+#include <iostream>
 
 /**
  * @brief Class representing a 2D image with pixel data

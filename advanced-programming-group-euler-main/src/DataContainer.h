@@ -115,7 +115,7 @@ public:
     /**
      * @brief Pure virtual method to get the number of channels
      * 
-     * @return int The number of channels (1 for grayscale, 3 for RGB, 4 for RGBA)
+     * @return int The number of channels (1 for greyscale, 3 for RGB, 4 for RGBA)
      */
     virtual int getChannels() const = 0;
 

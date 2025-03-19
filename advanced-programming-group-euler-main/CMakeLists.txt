@@ -57,6 +57,41 @@ add_executable(APImageFilters
     ${HEADER_FILES}
 )
 
+# Create a library
+add_library(MainLib
+    src/Pixel.cpp
+    src/DataContainer.cpp
+    src/Image.cpp
+    src/Volume.cpp
+    src/filter2D/Filter.cpp
+    src/filter2D/SimpleFilters.cpp
+    src/filter3D/VolumeFilter.cpp
+    src/filter3D/Gaussian3DFilter.cpp
+    src/filter3D/Median3DFilter.cpp
+    src/projectionFunc/Projection.cpp
+    src/projectionFunc/MaxIntensityProj.cpp
+    src/projectionFunc/MinIntensityProj.cpp
+    src/projectionFunc/AvgIntensityProj.cpp
+    src/Slice.cpp
+)
+target_include_directories(MainLib PUBLIC ${CMAKE_SOURCE_DIR}/src)
+
+# Unit test target: includes the tests (and necessary source files).
+add_executable(UnitTests
+    tests/TestCounters.cpp
+    tests/main.cpp
+    tests/testGaussian3DFilter.cpp
+    tests/testMedian3DFilter.cpp
+    tests/testVolume.cpp
+    tests/testProjection.cpp
+    tests/testProjectionMax.cpp
+    tests/testProjectionMin.cpp
+    tests/testProjectionAvg.cpp
+    tests/testSlice.cpp
+    ${HEADER_FILES}
+)
+target_link_libraries(UnitTests MainLib)
+
 # Enable testing
 include(CTest)
 enable_testing()

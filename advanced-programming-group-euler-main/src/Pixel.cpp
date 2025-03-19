@@ -14,8 +14,8 @@
  */
 
 #include "Pixel.h"
-#include <algorithm> // For clamp
-#include <cmath>     // For mathematical functions
+#include <algorithm>
+#include <cmath>
 
 // *******************************************************************************************
 // -------------------------------------------------------------------------------------------
@@ -118,9 +118,9 @@ void Pixel::RGBtoHSV(float& h, float& s, float& v) const {
 }
 // Set pixel values from HSV
 void Pixel::HSVtoRGB(float h, float s, float v) {
-    // Handle grayscale case
+    // Handle greyscale case
     if (s <= 0.0f) {
-        // Achromatic (gray)
+        // Achromatic (grey)
         r = g = b = static_cast<unsigned char>(std::round(v * 255.0f));
         return;
     }
@@ -210,9 +210,9 @@ void Pixel::RGBtoHSL(float& h, float& s, float& l) const {
 }
 // Set pixel values from HSL
 void Pixel::HSLtoRGB(float h, float s, float l) {
-    // Handle grayscale case
+    // Handle greyscale case
     if (s <= 0.0f) {
-        // Achromatic (gray)
+        // Achromatic (grey)
         r = g = b = static_cast<unsigned char>(std::round(l * 255.0f));
         return;
     }
