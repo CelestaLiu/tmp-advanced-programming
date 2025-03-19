@@ -11,6 +11,11 @@ void runMaxIntensityProjTests();
 void runMinIntensityProjTests();
 void runAvgIntensityProjTests();
 void runSliceTests();
+void runSharpeningFilterTests();
+void runPrewittFilterTests();
+void runRobertsCrossFilterTests();
+void runScharrFilterTests();
+void runSobelFilterTests();
 
 int main() {
     std::cout << "Running all unit tests..." << std::endl;
@@ -23,6 +28,11 @@ int main() {
     runMinIntensityProjTests();
     runAvgIntensityProjTests();
     runSliceTests();
+    runSharpeningFilterTests();
+    runPrewittFilterTests();
+    runRobertsCrossFilterTests();
+    runScharrFilterTests();
+    runSobelFilterTests();
     
     std::cout << "\nAll tests completed. "
               << passed << " passed, " << failed << " failed." << std::endl;

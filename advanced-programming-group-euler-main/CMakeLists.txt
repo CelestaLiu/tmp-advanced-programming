@@ -45,8 +45,9 @@ add_executable(APImageFilters
     src/filter2D/PrewittFilter.cpp
     src/filter2D/RobertsCrossFilter.cpp
     src/filter2D/SharpeningFilter.cpp
-    src/filter2D/SimpleFilters.cpp
     src/filter2D/SobelFilter.cpp
+    src/filter2D/ScharrFilter.cpp
+    src/filter2D/SimpleFilters.cpp
     src/filter3D/Gaussian3DFilter.cpp
     src/filter3D/Median3DFilter.cpp
     src/filter3D/VolumeFilter.cpp
@@ -64,7 +65,13 @@ add_library(MainLib
     src/Image.cpp
     src/Volume.cpp
     src/filter2D/Filter.cpp
+    src/filter2D/ConvolutionFilter.cpp
     src/filter2D/SimpleFilters.cpp
+    src/filter2D/PrewittFilter.cpp
+    src/filter2D/RobertsCrossFilter.cpp
+    src/filter2D/SharpeningFilter.cpp
+    src/filter2D/SobelFilter.cpp
+    src/filter2D/ScharrFilter.cpp
     src/filter3D/VolumeFilter.cpp
     src/filter3D/Gaussian3DFilter.cpp
     src/filter3D/Median3DFilter.cpp
@@ -88,6 +95,11 @@ add_executable(UnitTests
     tests/testProjectionMin.cpp
     tests/testProjectionAvg.cpp
     tests/testSlice.cpp
+    tests/testPrewittFilter.cpp
+    tests/testRobertsCrossFilter.cpp
+    tests/testSharpeningFilter.cpp
+    tests/testSobelFilter.cpp
+    tests/testScharrFilter.cpp
     ${HEADER_FILES}
 )
 target_link_libraries(UnitTests MainLib)

@@ -1,0 +1,32 @@
+[
+{
+  "directory": "/home/ubuntu/tmp-advanced-programming/build",
+  "command": "/usr/bin/g++  -I/home/ubuntu/tmp-advanced-programming/advanced-programming-group-euler-1c.-2D-Conv-Filter-for-Image-Sharpening/src -g -std=gnu++20 -o CMakeFiles/APImageFilters.dir/src/main.cpp.o -c /home/ubuntu/tmp-advanced-programming/advanced-programming-group-euler-1c.-2D-Conv-Filter-for-Image-Sharpening/src/main.cpp",
+  "file": "/home/ubuntu/tmp-advanced-programming/advanced-programming-group-euler-1c.-2D-Conv-Filter-for-Image-Sharpening/src/main.cpp"
+},
+{
+  "directory": "/home/ubuntu/tmp-advanced-programming/build",
+  "command": "/usr/bin/g++  -I/home/ubuntu/tmp-advanced-programming/advanced-programming-group-euler-1c.-2D-Conv-Filter-for-Image-Sharpening/src -g -std=gnu++20 -o CMakeFiles/APImageFilters.dir/src/Image.cpp.o -c /home/ubuntu/tmp-advanced-programming/advanced-programming-group-euler-1c.-2D-Conv-Filter-for-Image-Sharpening/src/Image.cpp",
+  "file": "/home/ubuntu/tmp-advanced-programming/advanced-programming-group-euler-1c.-2D-Conv-Filter-for-Image-Sharpening/src/Image.cpp"
+},
+{
+  "directory": "/home/ubuntu/tmp-advanced-programming/build",
+  "command": "/usr/bin/g++  -I/home/ubuntu/tmp-advanced-programming/advanced-programming-group-euler-1c.-2D-Conv-Filter-for-Image-Sharpening/src -g -std=gnu++20 -o CMakeFiles/APImageFilters.dir/src/Pixel.cpp.o -c /home/ubuntu/tmp-advanced-programming/advanced-programming-group-euler-1c.-2D-Conv-Filter-for-Image-Sharpening/src/Pixel.cpp",
+  "file": "/home/ubuntu/tmp-advanced-programming/advanced-programming-group-euler-1c.-2D-Conv-Filter-for-Image-Sharpening/src/Pixel.cpp"
+},
+{
+  "directory": "/home/ubuntu/tmp-advanced-programming/build",
+  "command": "/usr/bin/g++  -I/home/ubuntu/tmp-advanced-programming/advanced-programming-group-euler-1c.-2D-Conv-Filter-for-Image-Sharpening/src -g -std=gnu++20 -o CMakeFiles/APImageFilters.dir/src/DataContainer.cpp.o -c /home/ubuntu/tmp-advanced-programming/advanced-programming-group-euler-1c.-2D-Conv-Filter-for-Image-Sharpening/src/DataContainer.cpp",
+  "file": "/home/ubuntu/tmp-advanced-programming/advanced-programming-group-euler-1c.-2D-Conv-Filter-for-Image-Sharpening/src/DataContainer.cpp"
+},
+{
+  "directory": "/home/ubuntu/tmp-advanced-programming/build",
+  "command": "/usr/bin/g++  -I/home/ubuntu/tmp-advanced-programming/advanced-programming-group-euler-1c.-2D-Conv-Filter-for-Image-Sharpening/src -g -std=gnu++20 -o CMakeFiles/APImageFilters.dir/src/Filter.cpp.o -c /home/ubuntu/tmp-advanced-programming/advanced-programming-group-euler-1c.-2D-Conv-Filter-for-Image-Sharpening/src/Filter.cpp",
+  "file": "/home/ubuntu/tmp-advanced-programming/advanced-programming-group-euler-1c.-2D-Conv-Filter-for-Image-Sharpening/src/Filter.cpp"
+},
+{
+  "directory": "/home/ubuntu/tmp-advanced-programming/build",
+  "command": "/usr/bin/g++  -I/home/ubuntu/tmp-advanced-programming/advanced-programming-group-euler-1c.-2D-Conv-Filter-for-Image-Sharpening/src -g -std=gnu++20 -o CMakeFiles/APImageFilters.dir/src/SimpleFilters.cpp.o -c /home/ubuntu/tmp-advanced-programming/advanced-programming-group-euler-1c.-2D-Conv-Filter-for-Image-Sharpening/src/SimpleFilters.cpp",
+  "file": "/home/ubuntu/tmp-advanced-programming/advanced-programming-group-euler-1c.-2D-Conv-Filter-for-Image-Sharpening/src/SimpleFilters.cpp"
+}
+]
